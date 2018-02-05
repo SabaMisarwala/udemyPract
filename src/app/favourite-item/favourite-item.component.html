@@ -1,0 +1,15 @@
+<div class="container">
+<span
+class="glyphicon star"
+[class.glyphicon-star]="isFavourite"
+[class.glyphicon-star-empty]="!isFavourite"
+(click) = "onClick()"
+></span>
+
+
+<span 
+[class]="isFavorite ? 'glyphicon heart glyphicon-heart' : 'glyphicon heart glyphicon-heart-empty'" 
+(click)="isFavorite = !isFavorite">
+</span>
+
+</div>

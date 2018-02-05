@@ -1,0 +1,32 @@
+<div class="container">
+<h3>{{title}}</h3>
+
+<ol>
+  <li *ngFor = "let course of courses">{{course}}</li>
+</ol>
+
+<!-- class binding -->
+<button class="btn btn-primary" [class.active]="isActive">save</button>
+
+<!-- style binding -->
+<button class="btn" [style.backgroundColor]="isActive ? 'green' : 'red' ">Active</button>
+
+<!-- event binding(how do u handle events in angular) -->
+<div (click)="divClick()" style="margin-top:10px;margin-bottom:10px">
+  <button class="btn btn-info" (click)="eventBtn($event)">Event</button>
+</div>   
+
+
+<!-- event Filtering -->
+input 1:<input (keyup.enter) = "onKeyUp($event)">
+<!-- simplifies the code (E.F) -->
+input 2:<input #email (keydown.enter) = "onKeyDown(email.value)">
+
+<!-- 2way binding -->
+input 3:<input [(ngModel)] = "showText" (keyup.enter)="twoWayBinding()">
+
+
+
+
+
+</div>
